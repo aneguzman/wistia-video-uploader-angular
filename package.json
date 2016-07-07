@@ -1,0 +1,22 @@
+{
+  "name": "angular-jquery-file-upload",
+  "version": "1.0.0",
+  "description": "This project is a angular wrapper (directive) of jquery-file-upload plugin.",
+  "main": "index.js",
+  "scripts": {
+	"start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aneudy Guzman",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.3"
+  }
+}
