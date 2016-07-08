@@ -3,7 +3,7 @@
     var $compile, $rootScope;
 
     // Load the wistiaFileUpload module, which contains the directive
-    beforeEach(module('myApp'));
+    beforeEach(module('wistiaUploader'));
 
     beforeEach(module('public/directives/fileUploader.html'));
 
