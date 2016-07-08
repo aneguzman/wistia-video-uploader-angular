@@ -9,12 +9,13 @@ app.directive('wistiaFileUploader',
             restrict: 'A',
             templateUrl: '/directives/fileUploader.html',
             link: function (scope, element, attrs) {
-                scope.url = '';
                 scope.progress = 0;
                 $('#fileupload').fileupload({
                     dataType: 'json',
                     url: apiValues.url + '?api_password=' + apiValues.password,
                     add: function (e, data) {
+                        scope.url = '';
+                        scope.progress = 0;
                         data.submit();
                     },
                     done: function (e, data) {
@@ -23,6 +24,9 @@ app.directive('wistiaFileUploader',
                                 scope.url = $sce.trustAsResourceUrl(apiValues.mediaUrl + data.result.hashed_id + '?videoFoam=true');
                             });
                         }
+                    },
+                    error:function(e, data) {
+                        alert(e.responseJSON.error);
                     },
                     progressall: function (e, data) {
                         if (data.total > 0) {
