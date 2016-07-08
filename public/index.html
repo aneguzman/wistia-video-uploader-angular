@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html ng-app="angular-upload-plugin">
+<html ng-app="myApp">
 <head>
     <title>Upload Plugin</title>
-    <script src="scripts/jquery1.10.min.js"></script>
-    <script src="scripts/angular.min.js"></script>
-    <script src="modules/main.js"></script>
-    <script src="controllers/main.js"></script>
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Generic page styles -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- blueimp Gallery styles -->
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    <link href="css/jquery.fileupload.css" rel="stylesheet" />
+    <link href="css/jquery.fileupload-ui.css" rel="stylesheet" />
 </head>
-<body ng-controller="mainCtrl">
-{{hello}}
+<body>
+
+    <div class="container">
+        <h1>Wistia Video Uploader AngularJS plugin</h1>
+        <h2 class="lead">Angular JS directive using the blueimp jquery file uploader</h2>
+        <br>
+
+        <!-- The file upload directive  -->
+        <div wistia-file-uploader></div>
+
+    </div>
+
+    <!-- The jQuery Library -->
+    <script src="scripts/vendor/jquery/jquery-1.11.3.min.js"></script>
+    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+    <script src="scripts/vendor/blueimp/jquery.ui.widget.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script src="scripts/vendor/blueimp/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="scripts/vendor/blueimp/jquery.fileupload.js"></script>
+    <!-- The Angular Library -->
+    <script src="scripts/vendor/angular/angular.js"></script>
+    <!-- The Bootstrap Library -->
+    <script src="scripts/vendor/bootstrap/bootstrap-3.3.6.min.js"></script>
+
+    <!-- APP Libraries -->
+    <script src="modules/main.js"></script>
+    <script src="globals/globals.js"></script>
+    <script src="directives/fileUploader.js"></script>
 </body>
 </html>

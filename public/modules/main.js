@@ -1,2 +1,6 @@
-﻿angular.module('angular-upload-plugin', []);
-var app = angular.module('angular-upload-plugin');
+﻿/**
+ * Create the main module of the app. 
+ * Saves the module in a variable for further use.
+ */
+angular.module('myApp', []);
+var app = angular.module('myApp');
